@@ -1,0 +1,27 @@
+
+Nội dung: 
+	- Nhận diện số 1-9 sử dụng deep learning với time series
+	- Ngôn ngữ sử dụng: Python 3.6
+I. Phương pháp: 
+	1. Feature extraction: Sử dụng MFCCs
+	2.  Training: Sử dụng mạng một mạng Recurrent  neural network(RNN). Ở đây dùng mạng LSTM để thực hiện trainning:
+	3. Test
+II. Chi tiết:
+	1. Feature extraction:
+		- Tách file .wav ra thành nhiều frame. Mỗi frame 0.025s
+		- Mỗi frame lấy ra 26 MFCC coefficients
+		- Stack lại thành  vector dataset
+	2. Trainning:	
+		Cấu trúc model:
+		
+
+- Kết quả sau khi train 700 epochs độ chính xác 98%:	
+	
+III. Link tham khảo:
+ 
+Dataset: https://storage.cloud.google.com/download.tensorflow.org/data/speech_commands_v0.02.tar.gz
+
+MFCCs: http://practicalcryptography.com/miscellaneous/machine-learning/guide-mel-frequency-cepstral-coefficients-mfccs/
+
+LSTM: https://colah.github.io/posts/2015-08-Understanding-LSTMs/
+
